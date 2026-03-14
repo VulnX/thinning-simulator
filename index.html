@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Thinning Simulator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Thinning Simulator</h1>
+      </div>
+
+      <div class="controls">
+        <div class="control-group">
+          <label class="control-label">
+            Brush Size <span id="sizeDisplay" class="value-badge">5</span>
+          </label>
+          <input type="range" id="brushSlider" min="1" max="20" value="5" />
+        </div>
+
+        <div class="control-group">
+          <label class="control-label">
+            Animation FPS <span id="fpsDisplay" class="value-badge">30</span>
+          </label>
+          <input type="range" id="fpsSlider" min="1" max="60" value="30" />
+        </div>
+
+        <div class="button-group">
+          <button id="thinBtn">Start Thinning</button>
+          <button id="clearBtn">Clear Canvas</button>
+        </div>
+      </div>
+
+      <div class="canvas-wrapper">
+        <canvas width="300" height="300"></canvas>
+      </div>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
